@@ -35,3 +35,20 @@ Deploy a PHP application on an AWS EC2 Ubuntu server using Apache Web Server.
  
 ### Status
 ✅ Completed
+
+---
+ 
+## Phase 3 - Docker Containerization
+ 
+### Objective
+Containerize the PHP application using Docker.
+ 
+### Tasks Completed
+- Created a Dockerfile
+- Built a Docker image
+- Ran the application inside a Docker container
+- Exposed the container on port 8080
+- Verified the application using the EC2 Public IP
+ 
+### Status
+✅ Completed
