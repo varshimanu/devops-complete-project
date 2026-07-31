@@ -1,0 +1,12 @@
+.terraform/
+*.tfstate
+*.tfstate.*
+.terraform.lock.hcl
+ 
+.aws/
+ 
+*.pem
+ 
+terraform.tfvars
+ 
+.env
