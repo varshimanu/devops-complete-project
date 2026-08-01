@@ -1,54 +1,87 @@
-# DevOps Complete Project
+# DevOps Complete Project - CI/CD Pipeline on AWS EC2
  
-## Tools Used
+## Project Overview
  
-- AWS EC2
+This project demonstrates a complete CI/CD pipeline for a PHP web application using AWS EC2, GitHub, Docker, and Jenkins.
+ 
+The application is automatically built and deployed whenever code is pushed to the GitHub repository.
+ 
+---
+ 
+## Architecture
+ 
+GitHub
+↓
+GitHub Webhook
+↓
+Jenkins
+↓
+Docker Build
+↓
+Docker Container
+↓
+PHP Web Application
+ 
+---
+ 
+## Technologies Used
+ 
+- AWS EC2 (Ubuntu)
+- Linux
 - Git
 - GitHub
 - Docker
-- Terraform
 - Jenkins
-- Kubernetes
-- Ansible
+- GitHub Webhook
+- Apache
+- PHP
  
-## Project Status
+---
  
-Phase 1 ✅ Completed
+## Features
  
-- Ubuntu Server
+- Dockerized PHP application
+- Automated CI/CD pipeline
+- GitHub Webhook integration
+- Automatic deployment after every Git push
+- Running on AWS EC2
+ 
+---
+ 
+## Project Structure
+ 
+```
+devops-complete-project/
+│
+├── app/
+├── Dockerfile
+├── Jenkinsfile
+├── screenshots/
+└── README.md
+```
+ 
+---
+ 
+## Screenshots
+ 
+Project screenshots are available in the **screenshots/** folder.
+ 
+---
+ 
+## Skills Demonstrated
+ 
+- AWS EC2
+- Linux Administration
+- Git & GitHub
 - Docker
-- Terraform
-
+- Jenkins
+- CI/CD Pipeline
+- GitHub Webhooks
+ 
 ---
  
-## Phase 2 - PHP Website Deployment
+## Future Improvements
  
-### Objective
-Deploy a PHP application on an AWS EC2 Ubuntu server using Apache Web Server.
- 
-### Tasks Completed
-- Installed Apache Web Server
-- Installed PHP
-- Created a PHP application
-- Deployed the application to `/var/www/html`
-- Verified the website using the EC2 Public IP
- 
-### Status
-✅ Completed
-
----
- 
-## Phase 3 - Docker Containerization
- 
-### Objective
-Containerize the PHP application using Docker.
- 
-### Tasks Completed
-- Created a Dockerfile
-- Built a Docker image
-- Ran the application inside a Docker container
-- Exposed the container on port 8080
-- Verified the application using the EC2 Public IP
- 
-### Status
-✅ Completed
+- Kubernetes Deployment
+- Terraform Infrastructure as Code
+- Monitoring with Prometheus & Grafana
