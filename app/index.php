@@ -13,7 +13,7 @@
  
 <h2>Welcome to My DevOps Journey CI/CD Test</h2>
  
-<p>This application is deployed using Docker, Jenkins, Kubernetes and Terraform.</p>
+<p>This application is deployed using Docker and Jenkins through an automated CI/CD pipeline on AWS EC2.</p>
  
 <p><strong>Server Time:</strong>
  
