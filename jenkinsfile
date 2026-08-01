@@ -1,0 +1,26 @@
+pipeline {
+    agent any
+ 
+    stages {
+        stage('Clone') {
+            steps {
+                checkout scm
+            }
+        }
+ 
+        stage('Build Docker Image') {
+            steps {
+                sh 'docker build -t php-app .'
+            }
+        }
+ 
+        stage('Run Docker Container') {
+            steps {
+                sh '''
+                docker rm -f php-app || true
+                docker run -d --name php-app -p 8081:80 php-app
+                '''
+            }
+        }
+    }
+}
