@@ -2,7 +2,8 @@ pipeline {
     agent any
  
     stages {
-        stage('Clone') {
+ 
+        stage('Checkout') {
             steps {
                 checkout scm
             }
@@ -10,17 +11,19 @@ pipeline {
  
         stage('Build Docker Image') {
             steps {
-                sh 'docker build -t php-app .'
+                sh 'docker build -t php-app:latest .'
             }
         }
  
-        stage('Run Docker Container') {
+        stage('Deploy Container') {
             steps {
                 sh '''
-                docker rm -f php-app || true
-                docker run -d --name php-app -p 8081:80 php-app
+                docker stop php-app || true
+                docker rm php-app || true
+                docker run -d --name php-app -p 80:80 php-app:latest
                 '''
             }
         }
+ 
     }
 }
